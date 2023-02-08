@@ -1,0 +1,24 @@
+C:\Users\khaled GB\source\repos\AirportManagement\AM.ApplicationCore\bin\Debug\net6.0\AM.ApplicationCore.deps.json
+C:\Users\khaled GB\source\repos\AirportManagement\AM.ApplicationCore\bin\Debug\net6.0\AM.ApplicationCore.dll
+C:\Users\khaled GB\source\repos\AirportManagement\AM.ApplicationCore\bin\Debug\net6.0\AM.ApplicationCore.pdb
+C:\Users\khaled GB\source\repos\AirportManagement\AM.ApplicationCore\obj\Debug\net6.0\AM.ApplicationCore.csproj.AssemblyReference.cache
+C:\Users\khaled GB\source\repos\AirportManagement\AM.ApplicationCore\obj\Debug\net6.0\AM.ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\khaled GB\source\repos\AirportManagement\AM.ApplicationCore\obj\Debug\net6.0\AM.ApplicationCore.AssemblyInfoInputs.cache
+C:\Users\khaled GB\source\repos\AirportManagement\AM.ApplicationCore\obj\Debug\net6.0\AM.ApplicationCore.AssemblyInfo.cs
+C:\Users\khaled GB\source\repos\AirportManagement\AM.ApplicationCore\obj\Debug\net6.0\AM.ApplicationCore.csproj.CoreCompileInputs.cache
+C:\Users\khaled GB\source\repos\AirportManagement\AM.ApplicationCore\obj\Debug\net6.0\AM.ApplicationCore.dll
+C:\Users\khaled GB\source\repos\AirportManagement\AM.ApplicationCore\obj\Debug\net6.0\refint\AM.ApplicationCore.dll
+C:\Users\khaled GB\source\repos\AirportManagement\AM.ApplicationCore\obj\Debug\net6.0\AM.ApplicationCore.pdb
+C:\Users\khaled GB\source\repos\AirportManagement\AM.ApplicationCore\obj\Debug\net6.0\ref\AM.ApplicationCore.dll
+D:\ESPRIT\TWIN\semestre2\Asp.Net\AirPortManagement\AM.ApplicationCore\bin\Debug\net6.0\AM.ApplicationCore.deps.json
+D:\ESPRIT\TWIN\semestre2\Asp.Net\AirPortManagement\AM.ApplicationCore\bin\Debug\net6.0\AM.ApplicationCore.dll
+D:\ESPRIT\TWIN\semestre2\Asp.Net\AirPortManagement\AM.ApplicationCore\bin\Debug\net6.0\AM.ApplicationCore.pdb
+D:\ESPRIT\TWIN\semestre2\Asp.Net\AirPortManagement\AM.ApplicationCore\obj\Debug\net6.0\AM.ApplicationCore.csproj.AssemblyReference.cache
+D:\ESPRIT\TWIN\semestre2\Asp.Net\AirPortManagement\AM.ApplicationCore\obj\Debug\net6.0\AM.ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\ESPRIT\TWIN\semestre2\Asp.Net\AirPortManagement\AM.ApplicationCore\obj\Debug\net6.0\AM.ApplicationCore.AssemblyInfoInputs.cache
+D:\ESPRIT\TWIN\semestre2\Asp.Net\AirPortManagement\AM.ApplicationCore\obj\Debug\net6.0\AM.ApplicationCore.AssemblyInfo.cs
+D:\ESPRIT\TWIN\semestre2\Asp.Net\AirPortManagement\AM.ApplicationCore\obj\Debug\net6.0\AM.ApplicationCore.csproj.CoreCompileInputs.cache
+D:\ESPRIT\TWIN\semestre2\Asp.Net\AirPortManagement\AM.ApplicationCore\obj\Debug\net6.0\AM.ApplicationCore.dll
+D:\ESPRIT\TWIN\semestre2\Asp.Net\AirPortManagement\AM.ApplicationCore\obj\Debug\net6.0\refint\AM.ApplicationCore.dll
+D:\ESPRIT\TWIN\semestre2\Asp.Net\AirPortManagement\AM.ApplicationCore\obj\Debug\net6.0\AM.ApplicationCore.pdb
+D:\ESPRIT\TWIN\semestre2\Asp.Net\AirPortManagement\AM.ApplicationCore\obj\Debug\net6.0\ref\AM.ApplicationCore.dll
