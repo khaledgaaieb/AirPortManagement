@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\AM.ApplicationCore",
+    "\\AM.ApplicationCore\\Domains",
     "\\AM.ApplicationCore\\Interfaces",
     "\\AM.ApplicationCore\\Services",
     "\\AM.UI.Console"
   ],
-  "SelectedNode": "\\AM.ApplicationCore\\Services\\ServiceFlight.cs",
+  "SelectedNode": "\\AM.ApplicationCore\\Domains\\Traveller.cs",
   "PreviewInSolutionExplorer": false
 }

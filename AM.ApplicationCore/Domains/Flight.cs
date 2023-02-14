@@ -22,7 +22,7 @@ namespace AM.ApplicationCore.Domain
 
         public override string ToString()
         {
-            return "destination : " + this.Destination +"\n"+ "FlightDate : " + this.FlightDate;
+            return "destination : " + this.Destination +"\n"+ "FlightDate : " + this.FlightDate +" estimated duration: "+this.EstimatedDuration;
         }
     }
 }
