@@ -4,7 +4,7 @@
 using AM.ApplicationCore.Domain;
 using AM.ApplicationCore.Domains;
 using AM.ApplicationCore.Services;
-
+using AM.Infrastructure;
 
 Console.WriteLine("hello");
 /*Plane p1= new Plane();
@@ -77,3 +77,7 @@ sF.DestinationGroupedFlights();
 Console.WriteLine(passenger1.FirstName + passenger1.LastName);
 passenger1.UpperFullName();
 Console.WriteLine(passenger1.FirstName + passenger1.LastName);
+
+AMContext ctx = new AMContext();
+ctx.Flights.Add(TestData.flight1);
+ctx.SaveChanges();

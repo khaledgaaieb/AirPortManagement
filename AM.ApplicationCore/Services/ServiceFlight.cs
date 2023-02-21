@@ -137,7 +137,7 @@ namespace AM.ApplicationCore.Services
             foreach (var f in query)
             {
                 Console.WriteLine("destination : "+f.Destination+" flightDate: "+f.FlightDate);
-            }
+            }   
         }
 
         public Action<Plane> FlightDetailsDel;
