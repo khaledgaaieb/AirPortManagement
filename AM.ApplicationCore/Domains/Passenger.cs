@@ -25,7 +25,10 @@ namespace AM.ApplicationCore.Domain
         [RegularExpression(@"^[0-9]{8}$", ErrorMessage = "Invalid Phone Number!")]
         public string?  telNumber { get; set; }
 
-        public ICollection<Flight> Flights { get; set; }
+       // public ICollection<Flight> Flights { get; set; }
+        public ICollection<Ticket> Tickets { get; set; }
+
+
 
         public override string ToString()
         {

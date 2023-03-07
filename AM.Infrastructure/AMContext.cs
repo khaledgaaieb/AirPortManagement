@@ -22,6 +22,9 @@ namespace AM.Infrastructure
             modelBuilder.ApplyConfiguration(new FlightConfiguration());
             modelBuilder.ApplyConfiguration(new PlaneConfiguration());
             modelBuilder.ApplyConfiguration(new PassengerConfiguration());
+            modelBuilder.ApplyConfiguration(new TicketConfiguration());
+            modelBuilder.Entity<Staff>().ToTable("Staff");
+            modelBuilder.Entity<Traveller>().ToTable("Traveller");
         }
 
         protected override void ConfigureConventions(ModelConfigurationBuilder modelConfigurationBuilder)
@@ -32,5 +35,7 @@ namespace AM.Infrastructure
         public DbSet<Flight> Flights { get; set; }
         public DbSet<Passenger> Passengers { get; set; }
         public DbSet<Plane> Planes { get; set; }
+        public DbSet<Traveller> Travellers { get; set; }
+        public DbSet<Staff> Staff { get; set; }
     }
 }

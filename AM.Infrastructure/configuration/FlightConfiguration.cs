@@ -13,13 +13,13 @@ namespace AM.Infrastructure.configuration
     {
         public void Configure(EntityTypeBuilder<Flight> builder)
         {
-            builder.HasMany(f => f.Passengers)
-                .WithMany(p => p.Flights)
-                .UsingEntity(t=>t.ToTable("MyReservation"));
-            builder.HasOne(f => f.Plane)
-                .WithMany(p => p.Flights)
-                .HasForeignKey(f => f.PlaneId)
-                .OnDelete(DeleteBehavior.ClientSetNull);
+            //builder.HasMany(f => f.Passengers)
+            //    .WithMany(p => p.Flights)
+            //    .UsingEntity(t=>t.ToTable("MyReservation"));
+            //builder.HasOne(f => f.Plane)
+            //    .WithMany(p => p.Flights)
+            //    .HasForeignKey(f => f.PlaneId)
+            //    .OnDelete(DeleteBehavior.ClientSetNull);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AM.ApplicationCore.Domains;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -20,8 +21,9 @@ namespace AM.ApplicationCore.Domain
         public int PlaneId { get; set; }
         //[ForeignKey("PlaneId")]
         public Plane Plane { get; set; }
-        public ICollection<Passenger> Passengers { get; set; }
+       // public ICollection<Passenger> Passengers { get; set; }
 
+        public ICollection<Ticket> Tickets { get; set; }
 
         public override string ToString()
         {

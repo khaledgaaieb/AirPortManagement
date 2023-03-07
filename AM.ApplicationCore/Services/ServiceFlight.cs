@@ -124,8 +124,8 @@ namespace AM.ApplicationCore.Services
             //var query = from p in flight.Passengers.OfType<Traveller>()
             //            orderby p.Birthdate ascending
             //            select p ;
-            var query = flight.Passengers.OfType<Traveller>().OrderBy(p => p.Birthdate).Select(p => p);
-            return query.Take(3);
+            //var query = flight.Passengers.OfType<Traveller>().OrderBy(p => p.Birthdate).Select(p => p);
+            return /*query.Take(3)*/ null;
         }
 
         public void ShowFlightDetails(Plane plane)
