@@ -1,4 +1,5 @@
 ﻿using AM.ApplicationCore.Domain;
+using AM.Infrastructure.configuration;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,11 @@ namespace AM.Infrastructure
             Initial Catalog=GaaiebKhaledDB;Integrated Security=true");
             base.OnConfiguring(optionsBuilder);
         }
-
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new FlightConfiguration());
+            modelBuilder.ApplyConfiguration(new PlaneConfiguration());
+        }
         public DbSet<Flight> Flights { get; set; }
         public DbSet<Passenger> Passengers { get; set; }
         public DbSet<Plane> Planes { get; set; }
