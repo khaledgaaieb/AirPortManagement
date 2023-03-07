@@ -13,8 +13,8 @@ namespace AM.ApplicationCore.Domain
 
         public override string ToString()
         {
-            return "traveller name: " + this.FirstName + " " + 
-                this.LastName + "traveller nationality : "+this.Nationality;
+            return "traveller name: " + this.FullName.FirstName + " " + 
+                this.FullName.LastName + "traveller nationality : "+this.Nationality;
         }
 
         public override void PassengerType()

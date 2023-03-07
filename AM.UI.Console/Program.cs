@@ -24,8 +24,11 @@ p1.PlaneType = PlaneType.AirBus;*/
 
 Passenger passenger1 = new Passenger
 {
-    FirstName = "khaled",
-    LastName = "gaaieb",
+    FullName = new FullName
+    {
+        FirstName = "khaled",
+        LastName = "gaaieb",
+    },
     EmailAddress = "khaled.gaaieb@esprit.tn",
 
 };
@@ -74,9 +77,9 @@ foreach(var item in sF.SeniorTravellers(TestData.flight1)) { Console.WriteLine(i
 
 sF.DestinationGroupedFlights();
 
-Console.WriteLine(passenger1.FirstName + passenger1.LastName);
+Console.WriteLine(passenger1.FullName.FirstName + passenger1.FullName.LastName);
 passenger1.UpperFullName();
-Console.WriteLine(passenger1.FirstName + passenger1.LastName);
+Console.WriteLine(passenger1.FullName.FirstName + passenger1.FullName.LastName);
 
 AMContext ctx = new AMContext();
 ctx.Flights.Add(TestData.flight1);

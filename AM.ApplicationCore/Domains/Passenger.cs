@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AM.ApplicationCore.Domains;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -20,10 +21,7 @@ namespace AM.ApplicationCore.Domain
         //[EmailAddress]
         [DataType(DataType.EmailAddress)]
         public string?  EmailAddress { get; set; }
-        [MinLength(3,ErrorMessage ="min liength must be > 3 ")]
-        [MaxLength(25, ErrorMessage = "max liength must be < 25 ")]
-        public string? FirstName { get; set; }
-        public string? LastName { get; set; }
+        public FullName FullName { get; set; }
         [RegularExpression(@"^[0-9]{8}$", ErrorMessage = "Invalid Phone Number!")]
         public string?  telNumber { get; set; }
 
@@ -31,7 +29,7 @@ namespace AM.ApplicationCore.Domain
 
         public override string ToString()
         {
-            return "passenger first name : "+this.FirstName+"\n passenger last name : "+this.LastName;
+            return "passenger first name : "+this.FullName.FirstName+"\n passenger last name : "+this.FullName.LastName;
         }
 
 /*        public bool CheckProfile(string firstname,string lastname)
@@ -46,10 +44,10 @@ namespace AM.ApplicationCore.Domain
 
         public bool CheckProfile(string firstname, string lastname, string email = null)
         {
-            if(email == null) { return firstname == this.FirstName && lastname == this.LastName; }
+            if(email == null) { return firstname == this.FullName.FirstName && lastname == this.FullName.LastName; }
             else
             {
-                return firstname == this.FirstName && lastname == this.LastName
+                return firstname == this.FullName.FirstName && lastname == this.FullName.LastName
                     && email == this.EmailAddress;
             }
         }

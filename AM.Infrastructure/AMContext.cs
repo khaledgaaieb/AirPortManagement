@@ -21,7 +21,14 @@ namespace AM.Infrastructure
         {
             modelBuilder.ApplyConfiguration(new FlightConfiguration());
             modelBuilder.ApplyConfiguration(new PlaneConfiguration());
+            modelBuilder.ApplyConfiguration(new PassengerConfiguration());
         }
+
+        protected override void ConfigureConventions(ModelConfigurationBuilder modelConfigurationBuilder)
+        {
+            modelConfigurationBuilder.Properties<DateTime>().HaveColumnType("date");
+        }
+
         public DbSet<Flight> Flights { get; set; }
         public DbSet<Passenger> Passengers { get; set; }
         public DbSet<Plane> Planes { get; set; }
