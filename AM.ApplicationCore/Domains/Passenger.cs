@@ -26,7 +26,7 @@ namespace AM.ApplicationCore.Domain
         public string?  telNumber { get; set; }
 
        // public ICollection<Flight> Flights { get; set; }
-        public ICollection<Ticket> Tickets { get; set; }
+        public virtual ICollection<Ticket> Tickets { get; set; }
 
 
 

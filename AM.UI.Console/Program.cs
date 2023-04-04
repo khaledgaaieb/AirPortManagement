@@ -22,16 +22,16 @@ p1.PlaneType = PlaneType.AirBus;*/
 //    PlaneType = PlaneType.AirBus,
 //};
 
-Passenger passenger1 = new Passenger
-{
-    FullName = new FullName
-    {
-        FirstName = "khaled",
-        LastName = "gaaieb",
-    },
-    EmailAddress = "khaled.gaaieb@esprit.tn",
+//Passenger passenger1 = new Passenger
+//{
+//    FullName = new FullName
+//    {
+//        FirstName = "khaled",
+//        LastName = "gaaieb",
+//    },
+//    EmailAddress = "khaled.gaaieb@esprit.tn",
 
-};
+//};
 
 //Console.WriteLine(passenger1.CheckProfile("ahmed", "foulen"));
 
@@ -56,31 +56,32 @@ Passenger passenger1 = new Passenger
 //Console.WriteLine("Staff 1 : ");
 //staff1.PassengerType();
 
-ServiceFlight sF =new ServiceFlight();
-sF.Flights = TestData.listFlights;
+//ServiceFlight sF =new ServiceFlight();
+//sF.Flights = TestData.listFlights;
 
-foreach(var item in sF.GetFlightDates("Paris"))
-{
-    Console.WriteLine(item);
-}
+//foreach(var item in sF.GetFlightDates("Paris"))
+//{
+//    Console.WriteLine(item);
+//}
 
-sF.GetFlights("Destination", "Madrid");
+//sF.GetFlights("Destination", "Madrid");
 
-sF.FlightDetailsDel(TestData.BoingPlane);
-Console.WriteLine("total flights :" + sF.ProgrammedFlightNumber(new DateTime(2022,02,01)));
+//sF.FlightDetailsDel(TestData.BoingPlane);
+//Console.WriteLine("total flights :" + sF.ProgrammedFlightNumber(new DateTime(2022,02,01)));
 
-Console.WriteLine("average estimated time : " +sF.DurationAverageDel("Paris"));
+//Console.WriteLine("average estimated time : " +sF.DurationAverageDel("Paris"));
 
-foreach(var item in sF.OrderedDurationFlights()) { Console.WriteLine(item); } 
+//foreach(var item in sF.OrderedDurationFlights()) { Console.WriteLine(item); } 
 
-foreach(var item in sF.SeniorTravellers(TestData.flight1)) { Console.WriteLine(item); }
+//foreach(var item in sF.SeniorTravellers(TestData.flight1)) { Console.WriteLine(item); }
 
-sF.DestinationGroupedFlights();
+//sF.DestinationGroupedFlights();
 
-Console.WriteLine(passenger1.FullName.FirstName + passenger1.FullName.LastName);
-passenger1.UpperFullName();
-Console.WriteLine(passenger1.FullName.FirstName + passenger1.FullName.LastName);
+//Console.WriteLine(passenger1.FullName.FirstName + passenger1.FullName.LastName);
+//passenger1.UpperFullName();
+//Console.WriteLine(passenger1.FullName.FirstName + passenger1.FullName.LastName);
 
 AMContext ctx = new AMContext();
 ctx.Flights.Add(TestData.flight1);
 ctx.SaveChanges();
+Console.WriteLine(ctx.Flights.First().Plane.Capacity);  

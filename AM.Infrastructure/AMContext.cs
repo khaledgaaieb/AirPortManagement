@@ -16,6 +16,7 @@ namespace AM.Infrastructure
             optionsBuilder.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb;
             Initial Catalog=GaaiebKhaledDB;Integrated Security=true");
             base.OnConfiguring(optionsBuilder);
+            optionsBuilder.UseLazyLoadingProxies();
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
