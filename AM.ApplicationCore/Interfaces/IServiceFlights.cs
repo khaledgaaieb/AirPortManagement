@@ -9,6 +9,10 @@ namespace AM.ApplicationCore.Interfaces
 {
     public interface IServiceFlights
     {
+        //public void AddFlight(Flight flight);
+        //public void RemoveFlight(Flight flight);
+        //public List<Flight> GetFlightList();
+
         IEnumerable<DateTime> GetFlightDates(string destination);
         void GetFlights(string filterType, string filterValue);
 
@@ -19,5 +23,6 @@ namespace AM.ApplicationCore.Interfaces
 
         IEnumerable<Traveller> SeniorTravellers(Flight flight);
         IEnumerable<IGrouping<string, Flight>> DestinationGroupedFlights();
+
     }
 }

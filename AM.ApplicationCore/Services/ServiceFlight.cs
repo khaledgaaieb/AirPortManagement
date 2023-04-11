@@ -8,8 +8,34 @@ using System.Threading.Tasks;
 
 namespace AM.ApplicationCore.Services
 {
-    public class ServiceFlight:IServiceFlights
+    public class ServiceFlight:Service<Flight>,IServiceFlights
     {
+
+        //private readonly IGenericRepository<Flight> _repository;
+        IUnitOfWork unitOfWork;
+
+        public ServiceFlight(IUnitOfWork uof):base(uof)
+        {
+            //unitOfWork= uof;
+        }
+
+        //public void AddFlight(Flight flight)
+        //{
+        //    unitOfWork.Repository<Flight>().Add(flight);
+        //}
+
+        //public void RemoveFlight(Flight flight)
+        //{
+        //    unitOfWork.Repository<Flight>().Delete(flight);
+        //}
+
+        //public List<Flight> GetFlightList()
+        //{
+        //    return unitOfWork.Repository<Flight>().GetAll().ToList();
+        //}
+
+
+
         public List<Flight> Flights { get; set; } = new List<Flight>();
 
         public IEnumerable<IGrouping<string,Flight>> DestinationGroupedFlights()
@@ -139,6 +165,7 @@ namespace AM.ApplicationCore.Services
                 Console.WriteLine("destination : "+f.Destination+" flightDate: "+f.FlightDate);
             }   
         }
+
 
         public Action<Plane> FlightDetailsDel;
 
