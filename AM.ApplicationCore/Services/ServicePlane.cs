@@ -8,27 +8,27 @@ using System.Threading.Tasks;
 
 namespace AM.ApplicationCore.Services
 {
-    public class ServicePlane : IServicePlane
+    public class ServicePlane :Service<Plane>, IServicePlane
     {
         //private readonly IGenericRepository<Plane> _repository;
         private IUnitOfWork unitOfWork;
-        public ServicePlane(IUnitOfWork uof)
-        {
-            unitOfWork= uof;
-        }
-        public void AddPlane(Plane plane)
-        {
-            unitOfWork.Repository<Plane>().Add(plane);
-        }
+        public ServicePlane(IUnitOfWork uof):base(uof) { }
+        //{
+        //    unitOfWork= uof;
+        //}
+        //public void AddPlane(Plane plane)
+        //{
+        //    unitOfWork.Repository<Plane>().Add(plane);
+        //}
 
-        public List<Plane> GetPlaneList()
-        {
-            return unitOfWork.Repository<Plane>().GetAll().ToList();
-        }
+        //public List<Plane> GetPlaneList()
+        //{
+        //    return unitOfWork.Repository<Plane>().GetAll().ToList();
+        //}
 
-        public void RemovePlane(Plane plane)
-        {
-            unitOfWork.Repository<Plane>().Delete(plane);
-        }
+        //public void RemovePlane(Plane plane)
+        //{
+        //    unitOfWork.Repository<Plane>().Delete(plane);
+        //}
     }
 }
