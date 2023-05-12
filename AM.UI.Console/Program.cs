@@ -82,6 +82,22 @@ p1.PlaneType = PlaneType.AirBus;*/
 //Console.WriteLine(passenger1.FullName.FirstName + passenger1.FullName.LastName);
 
 AMContext ctx = new AMContext();
-ctx.Flights.Add(TestData.flight1);
+//ctx.Flights.Add(TestData.flight1);
+ServiceFlight serviceFlight = new ServiceFlight(new UnitOfWork(ctx, typeof(GenericRepository<>)));
+ServicePlane servicePlane = new ServicePlane(new UnitOfWork(ctx,typeof(GenericRepository<>)));
+//Console.WriteLine(ctx.Flights.First().Plane.Capacity);
+
+
+
+//foreach(var item in serviceFlight.GetAll()) { Console.WriteLine(item); }
+//servicePlane.isAvailable(TestData.flight1,1);
+
+//serviceFlight.Flights = TestData.listFlights;
+//foreach(var flight in serviceFlight.Flights) { serviceFlight.Add(flight); }
+//servicePlane.Add(TestData.BoingPlane);
+//servicePlane.Add(TestData.Airbusplane);
+
+
+
+
 ctx.SaveChanges();
-Console.WriteLine(ctx.Flights.First().Plane.Capacity);  

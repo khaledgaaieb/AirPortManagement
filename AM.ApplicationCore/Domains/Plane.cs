@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,14 +25,23 @@ namespace AM.ApplicationCore.Domain
             return "manufacture date : "+this.ManufactureDate;
         }
 
- /*       public Plane() { }
+        /*       public Plane() { }
 
-        public Plane(PlaneType type,int capacity,DateTime date)
+               public Plane(PlaneType type,int capacity,DateTime date)
+               {
+                   this.Capacity = capacity;
+                   this.ManufactureDate = date;
+                   this.PlaneType = type;
+               }
+        */
+        [NotMapped]
+        public string Information
         {
-            this.Capacity = capacity;
-            this.ManufactureDate = date;
-            this.PlaneType = type;
+            get
+            {
+                return PlaneId + " " + ManufactureDate + " " +
+        Capacity;
+            }
         }
- */
     }
 }

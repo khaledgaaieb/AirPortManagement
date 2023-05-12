@@ -1,4 +1,5 @@
 ﻿using AM.ApplicationCore.Domain;
+using AM.ApplicationCore.Domains;
 using AM.Infrastructure.configuration;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -14,7 +15,7 @@ namespace AM.Infrastructure
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb;
-            Initial Catalog=GaaiebKhaledDB;Integrated Security=true");
+            Initial Catalog=GaaiebKhaledDB;Integrated Security=true ; MultipleActiveResultSets = true") ; 
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseLazyLoadingProxies();
         }
@@ -38,5 +39,6 @@ namespace AM.Infrastructure
         public DbSet<Plane> Planes { get; set; }
         public DbSet<Traveller> Travellers { get; set; }
         public DbSet<Staff> Staff { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
     }
 }
