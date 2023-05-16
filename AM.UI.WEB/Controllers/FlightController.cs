@@ -31,7 +31,7 @@ namespace AM.UI.WEB.Controllers
         // GET: FlightController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(sf.GetById(id));
         }
 
         // GET: FlightController/Create
@@ -73,16 +73,19 @@ namespace AM.UI.WEB.Controllers
         // GET: FlightController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            ViewBag.PlaneFk = new SelectList(sp.GetAll(), "PlaneId", "Information");
+            return View(sf.GetById(id));
         }
 
         // POST: FlightController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Flight flight)
         {
             try
             {
+                sf.Update(flight);
+                sf.Commit();
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -95,16 +98,18 @@ namespace AM.UI.WEB.Controllers
         public ActionResult Delete(int id)
         {
             
-            return View();
+            return View(sf.GetById(id));
         }
 
         // POST: FlightController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, Flight flight)
         {
             try
             {
+                sf.Delete(flight);
+                sf.Commit();
                 return RedirectToAction(nameof(Index));
             }
             catch

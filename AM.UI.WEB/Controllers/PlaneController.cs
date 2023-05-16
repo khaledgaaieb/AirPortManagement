@@ -20,7 +20,7 @@ namespace AM.UI.WEB.Controllers
         // GET: PlaneController
         public ActionResult Index()
         {
-            return View();
+            return View(sP.GetAll());
         }
 
         // GET: PlaneController/Details/5
